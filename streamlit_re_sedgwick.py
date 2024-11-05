@@ -62,7 +62,7 @@ option = st.selectbox(
 col = option.replace(' ', '_')
 st.write('Showing ', option, ' Demographic Information')
 opacity = st.slider('Choose Opacity', 0.0, 1.0, 0.5)
-df = pd.read_csv('z:/Jon/Python/Census/sedgwick_st.csv')
+df = pd.read_csv('sedgwick_st.csv')
 df['coordinates'] = df['coordinates'].apply(ast.literal_eval)
 
 
@@ -109,6 +109,6 @@ map = st.pydeck_chart(r)
 
 st.write('Summary demographic information for Sedgwick County')
 
-st.table(pd.read_csv('z:/Jon/Python/Census/working_demographics_sedgwick.csv'))
+st.table(pd.read_csv('working_demographics_sedgwick.csv'))
 
 
